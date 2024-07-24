@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 import { colors } from '../../../utils/globalStyles';
 
 export const styles = StyleSheet.create({
@@ -18,12 +18,17 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.blackOpacity1,
   },
   publicAsideModalContent: {
-    flex: 1,
-    justifyContent: 'space-between'
+    // flex: 1,
+    justifyContent: 'space-between',
+    height: '100%'
   },
   publicAsideLogoContainer: {
-    height: '30%',
+    height: '20%',
     justifyContent: 'flex-end',
+  },
+  publicAsideOptionsContainer: {
+    flex: 1,
+    justifyContent: 'space-between'
   },
   publicAsideBackBtn: {
     backgroundColor: colors.purple2,
