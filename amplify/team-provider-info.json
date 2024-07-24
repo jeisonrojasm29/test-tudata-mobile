@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-tudatafrontend-dev-162035-authRole",
+      "UnauthRoleArn": "arn:aws:iam::897769184262:role/amplify-tudatafrontend-dev-162035-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::897769184262:role/amplify-tudatafrontend-dev-162035-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-tudatafrontend-dev-162035-deployment",
+      "UnauthRoleName": "amplify-tudatafrontend-dev-162035-unauthRole",
+      "StackName": "amplify-tudatafrontend-dev-162035",
+      "StackId": "arn:aws:cloudformation:us-east-1:897769184262:stack/amplify-tudatafrontend-dev-162035/90b2b600-c9ec-11ee-8bfa-1279bb74a42d",
+      "AmplifyAppId": "d204l8uqpiuac8"
+    }
+  }
+}
