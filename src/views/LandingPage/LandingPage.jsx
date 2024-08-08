@@ -13,17 +13,14 @@ export const LandingPage = () => {
   const navigate = useNavigate()
   return (
     <View style={styles.landingPage}>
-      <PublicAside />
-      <PublicLayout1>
-        <View style={styles.landingPageContainer1}>
-          <Text style={styles.landingPageTitle}>{landingPageStrings.landingPageTitle}</Text>
-          <Text style={styles.landingPageSubtitle}>{landingPageStrings.landingPageSubtitle}</Text>
-        </View>
-        <View style={styles.landingPageContainer2}>
-          <Image source={logoImage} />
-          <Button1 onPress={() => onLandingPageButton1Press(navigate)} text={landingPageStrings.landingPageButton1} />
-        </View>
-      </PublicLayout1>
+      <View style={styles.landingPageContainer1}>
+        <Text style={styles.landingPageTitle}>{landingPageStrings.landingPageTitle}</Text>
+        <Text style={styles.landingPageSubtitle}>{landingPageStrings.landingPageSubtitle}</Text>
+      </View>
+      <View style={styles.landingPageContainer2}>
+        <Image source={logoImage} />
+        <Button1 onPress={() => onLandingPageButton1Press(navigate)} text={landingPageStrings.landingPageButton1} />
+      </View>
     </View>
   )
 }

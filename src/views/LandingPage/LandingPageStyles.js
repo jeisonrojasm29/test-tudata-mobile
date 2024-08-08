@@ -4,6 +4,8 @@ import { colors } from '../../utils/globalStyles';
 export const styles = StyleSheet.create({
   landingPage: {
     flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'space-evenly'
   },
   landingPageImageBackground: {
     flex: 1,

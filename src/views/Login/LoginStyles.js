@@ -1,9 +1,10 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 import { colors } from "../../utils/globalStyles";
 
 export const styles = StyleSheet.create({
   login: {
     flex: 1,
+    justifyContent: 'space-between'
   },
   loginLogoContainer: {
     width: '100%',
