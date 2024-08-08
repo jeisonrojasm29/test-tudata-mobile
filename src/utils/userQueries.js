@@ -1,8 +1,5 @@
 import { userQueriesString } from './strings'
 import { REACT_APP_HOST } from '@env'
-import { Amplify as AmplifyClass } from './amplify'
-
-const amplify = new AmplifyClass()
 
 export const validateUserQuery = async (email, password) => {
   if (!email || !password) {
