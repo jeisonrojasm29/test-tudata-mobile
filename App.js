@@ -1,12 +1,21 @@
 import { NativeRouter, Route, Routes } from 'react-router-native';
+import * as ScreenOrientation from 'expo-screen-orientation';
 import { LandingPage } from './src/views/LandingPage/LandingPage';
 
-import { useLayoutEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 import { Login } from './src/views/Login/Login';
 import { getFonts } from './src/utils/globalStyles';
 import { PublicLayout1 } from './src/assets/components/PublicLayout1/PublicLayout1';
 
 export default function App() {
+  useEffect(() => {
+    const lockOrientation = async () => {
+      await ScreenOrientation.unlockAsync() // Permite todas las orientaciones
+    }
+
+    lockOrientation()
+  }, [])
+
   const [fontsLoaded, setFontsLoaded] = useState(false)
 
   useLayoutEffect(() => {
