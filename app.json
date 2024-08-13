@@ -3,7 +3,7 @@
     "name": "tudata-mobile",
     "slug": "tudata-mobile",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "",
     "userInterfaceStyle": "light",
     "splash": {
@@ -21,14 +21,6 @@
         "backgroundColor": "#ffffff"
       }
     },
-    "web": {},
-    "plugins": [
-      [
-        "expo-screen-orientation",
-        {
-          "initialOrientation": "DEFAULT"
-        }
-      ]
-    ]
+    "web": {}
   }
 }

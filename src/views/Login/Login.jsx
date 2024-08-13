@@ -70,10 +70,10 @@ export const Login = () => {
       </View>
 
       <View style={styles.loginFooterContainer}>
-        <Link to='/' underlayColor={colors.whiteOpacity1}>
+        <Link to='/' underlayColor={colors.colorOpacity1}>
           <Text style={styles.loginFooterTxt1}>{loginStrings.loginFooterTxt1}</Text>
         </Link>
-        <Link to='/' underlayColor={colors.whiteOpacity1}>
+        <Link to='/' underlayColor={colors.colorOpacity1}>
           <Text style={styles.loginFooterTxt2}>{loginStrings.loginFooterTxt2}<Text style={styles.loginFooterTxt3}>{loginStrings.loginFooterTxt3}</Text></Text>
         </Link>
       </View>

@@ -13,13 +13,13 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   loginTitle: {
-    color: colors.white1,
+    color: colors.color2,
     textAlign: 'center',
     fontFamily: 'Poppins-Bold',
     fontSize: 30,
   },
   loginSubtitle: {
-    color: colors.white1,
+    color: colors.color2,
     textAlign: 'center',
     fontFamily: 'Poppins-Light',
     fontSize: 16,
@@ -42,18 +42,18 @@ export const styles = StyleSheet.create({
     rowGap: 20
   },
   loginFooterTxt1: {
-    color: colors.white1,
+    color: colors.color2,
     fontSize: 16,
     fontFamily: 'Poppins-SemiBold',
     textDecorationLine: 'underline'
   },
   loginFooterTxt2: {
-    color: colors.white1,
+    color: colors.color2,
     fontSize: 16,
     fontFamily: 'Poppins-Medium',
   },
   loginFooterTxt3: {
-    color: colors.white1,
+    color: colors.color2,
     fontSize: 16,
     fontFamily: 'Poppins-Bold',
     textDecorationLine: 'underline'

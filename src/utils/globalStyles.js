@@ -1,4 +1,5 @@
 import * as Font from 'expo-font'
+import { Dimensions } from 'react-native'
 
 export const getFonts = () => Font.loadAsync({
   'Poppins-Black': require('../assets/fonts/poppins/Poppins-Black.otf'),
@@ -29,15 +30,43 @@ export const getFonts = () => Font.loadAsync({
   'Quicksand_Light': require('../assets/fonts/quicksand/Quicksand_Light.otf'),
 })
 
+export const windowHeight = Dimensions.get('window').height;
+export const windowWidth = Dimensions.get('window').width;
+export const screenHeight = Dimensions.get('screen').height;
+export const screenWidth = Dimensions.get('screen').width;
+
+export const vw = (size) => {
+  const vw = windowWidth / 100;
+  return size * vw;
+}
+
+export const vh = (size) => {
+  const vh = windowHeight / 100;
+  return size * vh;
+}
+
 export const colors = {
-  orange1: '#FF5D00',
-  white1: '#ffffff',
-  whiteOpacity1: '#ffffff80',
-  black1: '#000000',
-  blackOpacity1: '#00000080',
-  grey1: '#595959',
-  red1: '#FF0000',
-  red2: '#FF0A0A',
-  purple1: '#A10268',
-  purple2: '#73154F',
+  color1: '#FF5D00',
+  color2: '#ffffff',
+  color3: '#000000',
+  color4: '#595959',
+  color5: '#FF0000',
+  color6: '#FF0A0A',
+  color7: '#A10268',
+  color8: '#73154F',
+  colorOpacity1: '#ffffff80',
+  colorOpacity2: '#00000080',
+}
+
+export const textSizes = {
+  _1pt: vw(0.25),
+  _12pt: vw(0.25 * 12),
+  _14pt: vw(0.25 * 14),
+  _16pt: vw(0.25 * 16),
+  _17pt: vw(0.25 * 17),
+  _28pt: vw(0.25 * 28),
+  _20pt: vw(0.25 * 20),
+  _30pt: vw(0.25 * 30),
+  _34pt: vw(0.25 * 34),
+  _50pt: vw(0.25 * 50)
 }

@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../utils/globalStyles';
+import { colors, textSizes, vh, vw } from '../../utils/globalStyles';
 
 export const styles = StyleSheet.create({
   landingPage: {
@@ -9,30 +9,33 @@ export const styles = StyleSheet.create({
   },
   landingPageImageBackground: {
     flex: 1,
-    paddingVertical: '10%',
-    paddingHorizontal: '10%',
     justifyContent: 'space-evenly',
     alignItems: 'center'
   },
   landingPageTitle: {
-    color: colors.white1,
+    color: colors.color2,
     textAlign: 'center',
-    fontSize: 50,
+    fontSize: textSizes._50pt,
     fontFamily: 'Quicksand_Bold',
-    lineHeight: 60
+    lineHeight: vw(15)
   },
   landingPageSubtitle: {
-    color: colors.white1,
+    color: colors.color2,
     textAlign: 'center',
-    marginTop: '10%',
-    fontSize: 16,
+    marginTop: vh(4),
+    fontSize: textSizes._16pt,
     fontFamily: 'Quicksand_Bold',
-    lineHeight: 20
+    lineHeight: vw(5.5)
   },
   landingPageContainer1: {
     width: '100%'
   },
   landingPageContainer2: {
     width: '100%'
+  },
+  landingPageImage: {
+    alignSelf: 'center',
+    width: vw(60),
+    height: vw(60),
   }
 })

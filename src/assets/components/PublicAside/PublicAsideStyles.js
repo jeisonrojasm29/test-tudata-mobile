@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: '20%',
-    backgroundColor: colors.blackOpacity1,
+    backgroundColor: colors.colorOpacity2,
   },
   publicAsideModalContent: {
     // flex: 1,
@@ -31,13 +31,13 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   publicAsideBackBtn: {
-    backgroundColor: colors.purple2,
+    backgroundColor: colors.color8,
   },
   publicAsideOptions: {
     justifyContent: 'center',
   },
   publicAsideOptionsColor: {
-    backgroundColor: colors.purple1
+    backgroundColor: colors.color7
   },
   publicAsideOptionsPaddingMargin: {
     padding: '5%',
