@@ -1,16 +1,16 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../../utils/globalStyles';
+import { colors, textSizes, vh } from '../../../utils/globalStyles';
 
 export const styles = StyleSheet.create({
   button1: {
     backgroundColor: colors.color1,
-    paddingVertical: '3%',
+    paddingVertical: vh(1),
     alignItems: 'center',
-    borderRadius: 10
+    borderRadius: textSizes._10pt
   },
   button1Text: {
     color: colors.color2,
-    fontSize: 16,
+    fontSize: textSizes._16pt,
     fontFamily: 'Poppins-Bold'
   }
 })

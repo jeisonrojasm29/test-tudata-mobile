@@ -60,6 +60,7 @@ export const colors = {
 
 export const textSizes = {
   _1pt: vw(0.25),
+  _10pt: vw(0.25 * 10),
   _12pt: vw(0.25 * 12),
   _14pt: vw(0.25 * 14),
   _16pt: vw(0.25 * 16),
