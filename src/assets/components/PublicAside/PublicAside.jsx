@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Modal, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Modal, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native'
 
 import TudataIcon from '../../images/logoAndTudata.svg'
 import HamburguerIcon from '../../icons/hamburguerIcon.svg'
@@ -14,9 +14,10 @@ export const PublicAside = () => {
         animationType="fade"
         transparent={true}
         visible={modalVisible}
-        onRequestClose={() => setModalVisible(!modalVisible)}>
+        onRequestClose={() => setModalVisible(!modalVisible)}
+      >
         <View style={styles.publicAsideModal}>
-          <View style={styles.publicAsideModalContent}>
+          <ScrollView contentContainerStyle={styles.publicAsideModalContent}>
             <View style={[styles.publicAsideLogoContainer, styles.publicAsideOptionsColor, styles.publicAsideOptionsPaddingMargin]}>
               <TudataIcon />
             </View>
@@ -25,43 +26,46 @@ export const PublicAside = () => {
                 <TouchableOpacity
                   style={[styles.publicAsideBackBtn, styles.publicAsideOptions, styles.publicAsideOptionsPaddingMargin]}
                   onPress={() => setModalVisible(!modalVisible)}>
-                  <Text style={styles.textStyle}>Hide Modal</Text>
+                  <Text style={styles.publicAsideTextStyle}>Volver</Text>
                 </TouchableOpacity>
                 <View style={[styles.publicAsideOptions, styles.publicAsideOptionsColor, styles.publicAsideOptionsPaddingMargin]}>
-                  <Text>Nosotros</Text>
+                  <Text style={styles.publicAsideTextStyle}>Nosotros</Text>
                 </View>
                 <View style={[styles.publicAsideOptions, styles.publicAsideOptionsColor, styles.publicAsideOptionsPaddingMargin]}>
-                  <Text>Contacto</Text>
+                  <Text style={styles.publicAsideTextStyle}>Contacto</Text>
                   <View>
                     <TextInput
                       placeholder='Nombre completo'
-                      style={{ backgroundColor: 'white', height: 35, marginVertical: '2%', paddingHorizontal: '3%' }}
+                      style={styles.publicAsideTxtInput}
+                      autoCapitalize='words'
+                      autoCorrect={false}
                     />
                     <TextInput
                       placeholder='Correo'
-                      style={{ backgroundColor: 'white', height: 35, marginVertical: '2%', paddingHorizontal: '3%' }}
+                      style={styles.publicAsideTxtInput}
+                      autoCapitalize='none'
+                      autoCorrect={false}
                     />
                     <TextInput
                       placeholder='Teléfono'
-                      style={{ backgroundColor: 'white', height: 35, marginVertical: '2%', paddingHorizontal: '3%' }}
+                      style={styles.publicAsideTxtInput}
+                      keyboardType='phone-pad'
                     />
                     <TextInput
                       placeholder='Asunto'
-                      style={{ backgroundColor: 'white', height: 35, marginVertical: '2%', paddingHorizontal: '3%' }}
+                      style={[styles.publicAsideTxtInput, styles.publicAsideTxtArea]}
+                      multiline
+                      autoCapitalize='none'
+                      autoCorrect
                     />
                   </View>
                 </View>
                 <View style={[styles.publicAsideOptions, styles.publicAsideOptionsColor, styles.publicAsideOptionsPaddingMargin]}>
-                  <Text>FAQ</Text>
-                </View>
-              </View>
-              <View>
-                <View style={[styles.publicAsideOptions, styles.publicAsideOptionsColor, styles.publicAsideFooterOption]}>
-                  <Text>Acerca de tudata</Text>
+                  <Text style={styles.publicAsideTextStyle}>FAQ</Text>
                 </View>
               </View>
             </View>
-          </View>
+          </ScrollView>
         </View>
       </Modal>
       <TouchableOpacity

@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { colors, vw } from '../../../utils/globalStyles';
+import { colors, textSizes, vh, vw } from '../../../utils/globalStyles';
 
 export const styles = StyleSheet.create({
   publicAsideShowModalBtn: {
@@ -14,11 +14,11 @@ export const styles = StyleSheet.create({
     top: 0,
     bottom: 0,
     left: 0,
-    right: '20%',
+    right: '30%',
     backgroundColor: colors.colorOpacity2,
   },
   publicAsideModalContent: {
-    // flex: 1,
+    flex: 1,
     justifyContent: 'space-between',
     height: '100%'
   },
@@ -45,5 +45,23 @@ export const styles = StyleSheet.create({
   },
   publicAsideFooterOption: {
     padding: '5%',
+  },
+  publicAsideTextStyle: {
+    fontFamily: 'Poppins-Medium',
+    fontSize: textSizes._16pt,
+    color: colors.color2
+  },
+  publicAsideTxtInput: {
+    backgroundColor: colors.color2,
+    height: vh(4),
+    marginVertical: vh(1.3),
+    paddingHorizontal: vw(2),
+    borderRadius: textSizes._8pt,
+    fontFamily: 'Poppins-Light',
+    fontSize: textSizes._16pt,
+    color: colors.color3
+  },
+  publicAsideTxtArea: {
+    height: vh(10),
   }
 });
