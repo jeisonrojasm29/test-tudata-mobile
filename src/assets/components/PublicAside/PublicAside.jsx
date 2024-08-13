@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { Modal, Text, TextInput, TouchableOpacity, View } from 'react-native'
+
 import TudataIcon from '../../images/logoAndTudata.svg'
 import HamburguerIcon from '../../icons/hamburguerIcon.svg'
 import { styles } from './PublicAsideStyles'
+import { vw } from '../../../utils/globalStyles'
 
 export const PublicAside = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -65,7 +67,7 @@ export const PublicAside = () => {
       <TouchableOpacity
         style={styles.publicAsideShowModalBtn}
         onPress={() => setModalVisible(true)}>
-        <HamburguerIcon />
+        <HamburguerIcon height={vw(8)} width={vw(8)} />
       </TouchableOpacity>
     </>
   )

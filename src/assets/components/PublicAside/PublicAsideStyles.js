@@ -1,12 +1,12 @@
-import { Dimensions, StyleSheet } from 'react-native';
-import { colors } from '../../../utils/globalStyles';
+import { StyleSheet } from 'react-native';
+import { colors, vw } from '../../../utils/globalStyles';
 
 export const styles = StyleSheet.create({
   publicAsideShowModalBtn: {
     position: 'absolute',
     zIndex: 1,
     top: '10%',
-    left: '5%',
+    left: '5%'
   },
   publicAsideModal: {
     position: 'absolute',
