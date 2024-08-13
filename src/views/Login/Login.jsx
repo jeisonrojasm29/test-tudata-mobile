@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
-import { ScrollView, Text, View } from 'react-native'
-import { PublicLayout1 } from '../../assets/components/PublicLayout1/PublicLayout1'
+import { Text, View } from 'react-native'
+import { Link } from 'react-router-native'
+
 import { styles } from './LoginStyles'
 import TudataIcon from '../../assets/images/logoAndTudata.svg'
 import { Button1 } from '../../assets/components/Button1/Button1'
-import { Link } from 'react-router-native'
 import { loginStrings } from '../../utils/strings'
-import { colors } from '../../utils/globalStyles'
+import { colors, vw } from '../../utils/globalStyles'
 import { onEmailBlur, onEmailChange, onPasswordBlur, onPasswordChange, onSubmitPress } from './LoginFunctions'
 import { TextInput1 } from '../../assets/components/TextInput1/TextInput1'
 import { validateEmailFormat, validatePassFormat } from '../../utils/validateFunctions'
-import { PublicAside } from '../../assets/components/PublicAside/PublicAside'
 
 export const Login = () => {
   const [formValues, setFormValues] = useState({
@@ -25,9 +24,9 @@ export const Login = () => {
 
   const [isRequesting, setIsRequesting] = useState(false)
   return (
-    <ScrollView contentContainerStyle={styles.login}>
+    <View style={styles.login}>
       <View style={styles.loginLogoContainer}>
-        <TudataIcon />
+        <TudataIcon width={vw(60)} height={vw(60)} />
         <View>
           <Text style={styles.loginTitle}>{loginStrings.loginTitle}</Text>
           <Text style={styles.loginSubtitle}>{loginStrings.loginSubtitle}</Text>
@@ -43,6 +42,7 @@ export const Login = () => {
             onChangeText={(text) => onEmailChange(text, formValues, setFormValues)}
             onBlur={() => onEmailBlur(formValues.email, isValidFormat, setIsValidFormat)}
             errorMsg={loginStrings.loginTextInput1ErrorMsg}
+            autoCapitalize='none'
           />
           <TextInput1
             placeholder={loginStrings.loginTextInput2}
@@ -77,6 +77,6 @@ export const Login = () => {
           <Text style={styles.loginFooterTxt2}>{loginStrings.loginFooterTxt2}<Text style={styles.loginFooterTxt3}>{loginStrings.loginFooterTxt3}</Text></Text>
         </Link>
       </View>
-    </ScrollView>
+    </View >
   )
 }

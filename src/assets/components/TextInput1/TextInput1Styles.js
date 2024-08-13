@@ -1,28 +1,33 @@
 import { StyleSheet } from "react-native";
-import { colors } from "../../../utils/globalStyles";
+import { colors, textSizes, vh } from "../../../utils/globalStyles";
 
 export const styles = StyleSheet.create({
   textInput: {
     fontFamily: 'Poppins-Light',
-    fontSize: 16,
+    fontSize: textSizes._16pt,
     color: colors.color4,
     backgroundColor: colors.color2,
     width: '100%',
-    paddingVertical: '3%',
-    paddingHorizontal: '3%',
-    borderRadius: 10
+    paddingVertical: vh(1),
+    paddingHorizontal: vh(1),
+    borderRadius: textSizes._10pt
   },
   textInputError: {
     fontFamily: 'Poppins-Light',
-    fontSize: 16,
+    fontSize: textSizes._16pt,
     color: colors.color4,
     backgroundColor: colors.color2,
     width: '100%',
-    paddingVertical: '3%',
-    paddingHorizontal: '3%',
-    borderRadius: 10,
+    paddingVertical: vh(1),
+    paddingHorizontal: vh(1),
+    borderRadius: textSizes._10pt,
     borderColor: colors.color5,
     borderWidth: 2
   },
-  errorMsgTxt: { fontFamily: 'Poppins-Light', fontSize: 14, color: colors.color2 }
+  errorMsgTxt: {
+    fontFamily: 'Poppins-Light',
+    fontSize: textSizes._14pt,
+    color: colors.color2,
+    textAlign: 'left'
+  }
 })
