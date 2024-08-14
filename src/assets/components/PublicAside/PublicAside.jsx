@@ -5,9 +5,10 @@ import TudataIcon from '../../images/logoAndTudata.svg'
 import HamburguerIcon from '../../icons/hamburguerIcon.svg'
 import whiteBackArrow from '../../icons/whiteBackArrow.png'
 import { styles } from './PublicAsideStyles'
-import { vw } from '../../../utils/globalStyles'
+import { vh, vw } from '../../../utils/globalStyles'
 import { onContactPress } from './PublicAsideFunctions'
 import { publicAsideStrings } from '../../../utils/strings'
+import { Checkbox } from '../Checkbox/Checkbox'
 
 export const PublicAside = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -74,6 +75,12 @@ export const PublicAside = () => {
                             autoCapitalize='none'
                             autoCorrect
                           />
+                          <View style={styles.publicAsideDataTreatmentContainer}>
+                            <Checkbox style={styles.publicAsideDataTreatmentCheckbox}/>
+                            <Text style={styles.publicAsideDataTreatmentTxt}>
+                              Ver: Autorización para el tratamiento de datos personales
+                            </Text>
+                          </View>
                         </View>
                       )
                     }

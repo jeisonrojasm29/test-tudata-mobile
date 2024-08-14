@@ -88,5 +88,23 @@ export const styles = StyleSheet.create({
   },
   publicAsideTxtArea: {
     height: vh(10),
+  },
+  publicAsideDataTreatmentContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    gap: vw(4),
+    paddingRight: vw(8)
+  },
+  publicAsideDataTreatmentCheckbox: {
+    width: textSizes._20pt,
+    height: textSizes._20pt,
+    borderColor: colors.color2,
+    borderRadius: vw(1)
+  },
+  publicAsideDataTreatmentTxt: {
+    fontFamily: 'Poppins-Medium',
+    fontSize: textSizes._12pt,
+    color: colors.color2
   }
 });
