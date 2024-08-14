@@ -1,13 +1,17 @@
 import React, { useState } from 'react'
-import { Modal, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Image, LayoutAnimation, Modal, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native'
 
 import TudataIcon from '../../images/logoAndTudata.svg'
 import HamburguerIcon from '../../icons/hamburguerIcon.svg'
+import whiteBackArrow from '../../icons/whiteBackArrow.png'
 import { styles } from './PublicAsideStyles'
 import { vw } from '../../../utils/globalStyles'
+import { onContactPress } from './PublicAsideFunctions'
+import { publicAsideStrings } from '../../../utils/strings'
 
 export const PublicAside = () => {
   const [modalVisible, setModalVisible] = useState(false);
+  const [expanded, setExpanded] = useState(false)
   return (
     <>
       <Modal
@@ -19,49 +23,64 @@ export const PublicAside = () => {
         <View style={styles.publicAsideModal}>
           <ScrollView contentContainerStyle={styles.publicAsideModalContent}>
             <View style={[styles.publicAsideLogoContainer, styles.publicAsideOptionsColor, styles.publicAsideOptionsPaddingMargin]}>
-              <TudataIcon />
+              <TudataIcon width={vw(33)} height={vw(11)} />
             </View>
             <View style={styles.publicAsideOptionsContainer}>
               <View>
                 <TouchableOpacity
-                  style={[styles.publicAsideBackBtn, styles.publicAsideOptions, styles.publicAsideOptionsPaddingMargin]}
-                  onPress={() => setModalVisible(!modalVisible)}>
-                  <Text style={styles.publicAsideTextStyle}>Volver</Text>
+                  style={[styles.publicAsideBackBtn, styles.publicAsideOptionsPaddingMargin]}
+                  onPress={() => setModalVisible(!modalVisible)}
+                >
+                  <Image source={whiteBackArrow} style={styles.publicAsideBackArrow} resizeMode='contain' />
+                  <Text style={styles.publicAsideTextStyle}>{publicAsideStrings.txtOption1}</Text>
                 </TouchableOpacity>
                 <View style={[styles.publicAsideOptions, styles.publicAsideOptionsColor, styles.publicAsideOptionsPaddingMargin]}>
-                  <Text style={styles.publicAsideTextStyle}>Nosotros</Text>
+                  <Text style={styles.publicAsideTextStyle}>{publicAsideStrings.txtOption2}</Text>
                 </View>
-                <View style={[styles.publicAsideOptions, styles.publicAsideOptionsColor, styles.publicAsideOptionsPaddingMargin]}>
-                  <Text style={styles.publicAsideTextStyle}>Contacto</Text>
-                  <View>
-                    <TextInput
-                      placeholder='Nombre completo'
-                      style={styles.publicAsideTxtInput}
-                      autoCapitalize='words'
-                      autoCorrect={false}
-                    />
-                    <TextInput
-                      placeholder='Correo'
-                      style={styles.publicAsideTxtInput}
-                      autoCapitalize='none'
-                      autoCorrect={false}
-                    />
-                    <TextInput
-                      placeholder='Teléfono'
-                      style={styles.publicAsideTxtInput}
-                      keyboardType='phone-pad'
-                    />
-                    <TextInput
-                      placeholder='Asunto'
-                      style={[styles.publicAsideTxtInput, styles.publicAsideTxtArea]}
-                      multiline
-                      autoCapitalize='none'
-                      autoCorrect
-                    />
+                <TouchableOpacity onPress={() => onContactPress(setExpanded, LayoutAnimation)}>
+                  <View style={[styles.publicAsideOptions, styles.publicAsideOptionsColor, styles.publicAsideOptionsPaddingMargin]}>
+                    <View style={styles.publicAsideContactContainer}>
+                      <Text style={styles.publicAsideTextStyle}>{publicAsideStrings.txtOption3}</Text>
+                      <Image
+                        source={whiteBackArrow}
+                        style={expanded ? styles.publicAsideArrowExpanded : styles.publicAsideArrowNotExpanded}
+                        resizeMode='contain'
+                      />
+                    </View>
+                    {
+                      expanded && (
+                        <View>
+                          <TextInput
+                            placeholder={publicAsideStrings.contactPlaceholder1}
+                            style={styles.publicAsideTxtInput}
+                            autoCapitalize='words'
+                            autoCorrect={false}
+                          />
+                          <TextInput
+                            placeholder={publicAsideStrings.contactPlaceholder2}
+                            style={styles.publicAsideTxtInput}
+                            autoCapitalize='none'
+                            autoCorrect={false}
+                          />
+                          <TextInput
+                            placeholder={publicAsideStrings.contactPlaceholder3}
+                            style={styles.publicAsideTxtInput}
+                            keyboardType='phone-pad'
+                          />
+                          <TextInput
+                            placeholder={publicAsideStrings.contactPlaceholder4}
+                            style={[styles.publicAsideTxtInput, styles.publicAsideTxtArea]}
+                            multiline
+                            autoCapitalize='none'
+                            autoCorrect
+                          />
+                        </View>
+                      )
+                    }
                   </View>
-                </View>
+                </TouchableOpacity>
                 <View style={[styles.publicAsideOptions, styles.publicAsideOptionsColor, styles.publicAsideOptionsPaddingMargin]}>
-                  <Text style={styles.publicAsideTextStyle}>FAQ</Text>
+                  <Text style={styles.publicAsideTextStyle}>{publicAsideStrings.txtOption4}</Text>
                 </View>
               </View>
             </View>
