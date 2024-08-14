@@ -6,3 +6,13 @@ export const onContactPress = (setExpanded, LayoutAnimation) => {
 export const onDataTreatmentCheckboxPress = (setIsDataTreatmentChecked) => {
   setIsDataTreatmentChecked(prev => !prev)
 }
+
+export const onUsPress = (navigate, setModalVisible) => {
+  navigate('Nosotros')
+  setModalVisible(false)
+}
+
+export const onFaqPress = (navigate, setModalVisible) => {
+  navigate('FAQ')
+  setModalVisible(false)
+}

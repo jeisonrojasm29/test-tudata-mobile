@@ -120,6 +120,7 @@ export const styles = StyleSheet.create({
   },
   publicAsideSendBtnTxt: {
     fontFamily: 'Poppins-Medium',
+    fontSize: textSizes._16pt,
     color: colors.color2
   },
 });

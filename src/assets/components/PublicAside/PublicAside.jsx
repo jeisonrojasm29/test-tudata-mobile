@@ -6,14 +6,16 @@ import HamburguerIcon from '../../icons/hamburguerIcon.svg'
 import whiteBackArrow from '../../icons/whiteBackArrow.png'
 import { styles } from './PublicAsideStyles'
 import { vw } from '../../../utils/globalStyles'
-import { onContactPress, onDataTreatmentCheckboxPress } from './PublicAsideFunctions'
+import { onContactPress, onDataTreatmentCheckboxPress, onFaqPress, onUsPress } from './PublicAsideFunctions'
 import { publicAsideStrings } from '../../../utils/strings'
 import { Checkbox } from '../Checkbox/Checkbox'
+import { useNavigate } from 'react-router-native'
 
 export const PublicAside = () => {
   const [modalVisible, setModalVisible] = useState(false)
   const [contactOptionExpanded, setContactOptionExpanded] = useState(false)
   const [isDataTreatmentChecked, setIsDataTreatmentChecked] = useState(false)
+  const navigate = useNavigate()
   return (
     <>
       <Modal
@@ -36,9 +38,13 @@ export const PublicAside = () => {
                   <Image source={whiteBackArrow} style={styles.publicAsideBackArrow} resizeMode='contain' />
                   <Text style={styles.publicAsideTextStyle}>{publicAsideStrings.txtOption1}</Text>
                 </TouchableOpacity>
-                <View style={[styles.publicAsideOptions, styles.publicAsideOptionsColor, styles.publicAsideOptionsPaddingMargin]}>
-                  <Text style={styles.publicAsideTextStyle}>{publicAsideStrings.txtOption2}</Text>
-                </View>
+
+                <TouchableOpacity onPress={() => onUsPress(navigate, setModalVisible)}>
+                  <View style={[styles.publicAsideOptions, styles.publicAsideOptionsColor, styles.publicAsideOptionsPaddingMargin]}>
+                    <Text style={styles.publicAsideTextStyle}>{publicAsideStrings.txtOption2}</Text>
+                  </View>
+                </TouchableOpacity>
+
                 <View style={[styles.publicAsideOptions, styles.publicAsideOptionsColor, styles.publicAsideOptionsPaddingMargin]}>
                   <TouchableOpacity onPress={() => onContactPress(setContactOptionExpanded, LayoutAnimation)} style={styles.publicAsideContactContainer}>
                     <Text style={styles.publicAsideTextStyle}>{publicAsideStrings.txtOption3}</Text>
@@ -94,9 +100,11 @@ export const PublicAside = () => {
                     )
                   }
                 </View>
-                <View style={[styles.publicAsideOptions, styles.publicAsideOptionsColor, styles.publicAsideOptionsPaddingMargin]}>
-                  <Text style={styles.publicAsideTextStyle}>{publicAsideStrings.txtOption4}</Text>
-                </View>
+                <TouchableOpacity onPress={() => onFaqPress(navigate, setModalVisible)}>
+                  <View style={[styles.publicAsideOptions, styles.publicAsideOptionsColor, styles.publicAsideOptionsPaddingMargin]}>
+                    <Text style={styles.publicAsideTextStyle}>{publicAsideStrings.txtOption4}</Text>
+                  </View>
+                </TouchableOpacity>
               </View>
             </View>
           </ScrollView>

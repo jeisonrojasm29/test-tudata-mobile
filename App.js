@@ -24,6 +24,12 @@ export default function App() {
           <Route path='/' element={
             <LandingPage />
           } />
+          <Route path='/Nosotros' element={
+            <Login />
+          } />
+          <Route path='/FAQ' element={
+            <Login />
+          } />
           <Route path='/Inicio' element={
             <Login />
           } />
