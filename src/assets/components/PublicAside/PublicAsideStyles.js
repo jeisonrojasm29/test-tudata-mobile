@@ -106,5 +106,18 @@ export const styles = StyleSheet.create({
     fontFamily: 'Poppins-Medium',
     fontSize: textSizes._12pt,
     color: colors.color2
-  }
+  },
+  publicAsideSendBtn: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: vw(0.2),
+    borderColor: colors.color2,
+    paddingVertical: vh(1),
+    borderRadius: textSizes._10pt,
+    marginTop: vh(1)
+  },
+  publicAsideSendBtnTxt: {
+    fontFamily: 'Poppins-Medium',
+    color: colors.color2
+  },
 });

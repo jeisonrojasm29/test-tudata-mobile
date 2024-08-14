@@ -38,54 +38,57 @@ export const PublicAside = () => {
                 <View style={[styles.publicAsideOptions, styles.publicAsideOptionsColor, styles.publicAsideOptionsPaddingMargin]}>
                   <Text style={styles.publicAsideTextStyle}>{publicAsideStrings.txtOption2}</Text>
                 </View>
-                <TouchableOpacity onPress={() => onContactPress(setExpanded, LayoutAnimation)}>
-                  <View style={[styles.publicAsideOptions, styles.publicAsideOptionsColor, styles.publicAsideOptionsPaddingMargin]}>
-                    <View style={styles.publicAsideContactContainer}>
-                      <Text style={styles.publicAsideTextStyle}>{publicAsideStrings.txtOption3}</Text>
-                      <Image
-                        source={whiteBackArrow}
-                        style={expanded ? styles.publicAsideArrowExpanded : styles.publicAsideArrowNotExpanded}
-                        resizeMode='contain'
-                      />
-                    </View>
-                    {
-                      expanded && (
-                        <View>
-                          <TextInput
-                            placeholder={publicAsideStrings.contactPlaceholder1}
-                            style={styles.publicAsideTxtInput}
-                            autoCapitalize='words'
-                            autoCorrect={false}
-                          />
-                          <TextInput
-                            placeholder={publicAsideStrings.contactPlaceholder2}
-                            style={styles.publicAsideTxtInput}
-                            autoCapitalize='none'
-                            autoCorrect={false}
-                          />
-                          <TextInput
-                            placeholder={publicAsideStrings.contactPlaceholder3}
-                            style={styles.publicAsideTxtInput}
-                            keyboardType='phone-pad'
-                          />
-                          <TextInput
-                            placeholder={publicAsideStrings.contactPlaceholder4}
-                            style={[styles.publicAsideTxtInput, styles.publicAsideTxtArea]}
-                            multiline
-                            autoCapitalize='none'
-                            autoCorrect
-                          />
-                          <View style={styles.publicAsideDataTreatmentContainer}>
-                            <Checkbox style={styles.publicAsideDataTreatmentCheckbox}/>
-                            <Text style={styles.publicAsideDataTreatmentTxt}>
-                              Ver: Autorización para el tratamiento de datos personales
-                            </Text>
-                          </View>
+                <View style={[styles.publicAsideOptions, styles.publicAsideOptionsColor, styles.publicAsideOptionsPaddingMargin]}>
+                  <TouchableOpacity onPress={() => onContactPress(setExpanded, LayoutAnimation)} style={styles.publicAsideContactContainer}>
+                    <Text style={styles.publicAsideTextStyle}>{publicAsideStrings.txtOption3}</Text>
+                    <Image
+                      source={whiteBackArrow}
+                      style={expanded ? styles.publicAsideArrowExpanded : styles.publicAsideArrowNotExpanded}
+                      resizeMode='contain'
+                    />
+                  </TouchableOpacity>
+                  {
+                    expanded && (
+                      <View>
+                        <TextInput
+                          placeholder={publicAsideStrings.contactPlaceholder1}
+                          style={styles.publicAsideTxtInput}
+                          autoCapitalize='words'
+                          autoCorrect={false}
+                        />
+                        <TextInput
+                          placeholder={publicAsideStrings.contactPlaceholder2}
+                          style={styles.publicAsideTxtInput}
+                          autoCapitalize='none'
+                          autoCorrect={false}
+                        />
+                        <TextInput
+                          placeholder={publicAsideStrings.contactPlaceholder3}
+                          style={styles.publicAsideTxtInput}
+                          keyboardType='phone-pad'
+                        />
+                        <TextInput
+                          placeholder={publicAsideStrings.contactPlaceholder4}
+                          style={[styles.publicAsideTxtInput, styles.publicAsideTxtArea]}
+                          multiline
+                          autoCapitalize='none'
+                          autoCorrect
+                        />
+                        <View style={styles.publicAsideDataTreatmentContainer}>
+                          <Checkbox style={styles.publicAsideDataTreatmentCheckbox} />
+                          <Text style={styles.publicAsideDataTreatmentTxt}>
+                            {publicAsideStrings.contactFooterTxt1}
+                          </Text>
                         </View>
-                      )
-                    }
-                  </View>
-                </TouchableOpacity>
+                        <TouchableOpacity style={styles.publicAsideSendBtn}>
+                          <Text style={styles.publicAsideSendBtnTxt}>
+                            {publicAsideStrings.contactBtn1Txt1}
+                          </Text>
+                        </TouchableOpacity>
+                      </View>
+                    )
+                  }
+                </View>
                 <View style={[styles.publicAsideOptions, styles.publicAsideOptionsColor, styles.publicAsideOptionsPaddingMargin]}>
                   <Text style={styles.publicAsideTextStyle}>{publicAsideStrings.txtOption4}</Text>
                 </View>

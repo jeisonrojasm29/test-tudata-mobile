@@ -26,6 +26,8 @@ export const publicAsideStrings = {
   contactPlaceholder2: 'Correo',
   contactPlaceholder3: 'Teléfono',
   contactPlaceholder4: 'Asunto',
+  contactFooterTxt1: 'Ver: Autorización para el tratamiento de datos personales',
+  contactBtn1Txt1: 'Enviar'
 }
 
 export const userQueriesString = {
