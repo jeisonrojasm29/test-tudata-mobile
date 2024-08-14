@@ -78,7 +78,7 @@ export const styles = StyleSheet.create({
   publicAsideTxtInput: {
     backgroundColor: colors.color2,
     height: vh(4.5),
-    marginVertical: vh(1.3),
+    marginVertical: vh(1),
     paddingHorizontal: vw(2),
     borderRadius: textSizes._8pt,
     fontFamily: 'Poppins-Light',
@@ -88,6 +88,8 @@ export const styles = StyleSheet.create({
   },
   publicAsideTxtArea: {
     height: vh(10),
+    textAlignVertical: 'top',
+    paddingTop: vh(0.5)
   },
   publicAsideDataTreatmentContainer: {
     flexDirection: 'row',

@@ -5,14 +5,15 @@ import TudataIcon from '../../images/logoAndTudata.svg'
 import HamburguerIcon from '../../icons/hamburguerIcon.svg'
 import whiteBackArrow from '../../icons/whiteBackArrow.png'
 import { styles } from './PublicAsideStyles'
-import { vh, vw } from '../../../utils/globalStyles'
-import { onContactPress } from './PublicAsideFunctions'
+import { vw } from '../../../utils/globalStyles'
+import { onContactPress, onDataTreatmentCheckboxPress } from './PublicAsideFunctions'
 import { publicAsideStrings } from '../../../utils/strings'
 import { Checkbox } from '../Checkbox/Checkbox'
 
 export const PublicAside = () => {
-  const [modalVisible, setModalVisible] = useState(false);
-  const [expanded, setExpanded] = useState(false)
+  const [modalVisible, setModalVisible] = useState(false)
+  const [contactOptionExpanded, setContactOptionExpanded] = useState(false)
+  const [isDataTreatmentChecked, setIsDataTreatmentChecked] = useState(false)
   return (
     <>
       <Modal
@@ -39,16 +40,16 @@ export const PublicAside = () => {
                   <Text style={styles.publicAsideTextStyle}>{publicAsideStrings.txtOption2}</Text>
                 </View>
                 <View style={[styles.publicAsideOptions, styles.publicAsideOptionsColor, styles.publicAsideOptionsPaddingMargin]}>
-                  <TouchableOpacity onPress={() => onContactPress(setExpanded, LayoutAnimation)} style={styles.publicAsideContactContainer}>
+                  <TouchableOpacity onPress={() => onContactPress(setContactOptionExpanded, LayoutAnimation)} style={styles.publicAsideContactContainer}>
                     <Text style={styles.publicAsideTextStyle}>{publicAsideStrings.txtOption3}</Text>
                     <Image
                       source={whiteBackArrow}
-                      style={expanded ? styles.publicAsideArrowExpanded : styles.publicAsideArrowNotExpanded}
+                      style={contactOptionExpanded ? styles.publicAsideArrowExpanded : styles.publicAsideArrowNotExpanded}
                       resizeMode='contain'
                     />
                   </TouchableOpacity>
                   {
-                    expanded && (
+                    contactOptionExpanded && (
                       <View>
                         <TextInput
                           placeholder={publicAsideStrings.contactPlaceholder1}
@@ -75,7 +76,11 @@ export const PublicAside = () => {
                           autoCorrect
                         />
                         <View style={styles.publicAsideDataTreatmentContainer}>
-                          <Checkbox style={styles.publicAsideDataTreatmentCheckbox} />
+                          <Checkbox
+                            isChecked={isDataTreatmentChecked}
+                            onCheck={() => onDataTreatmentCheckboxPress(setIsDataTreatmentChecked)}
+                            style={styles.publicAsideDataTreatmentCheckbox}
+                          />
                           <Text style={styles.publicAsideDataTreatmentTxt}>
                             {publicAsideStrings.contactFooterTxt1}
                           </Text>
