@@ -1,10 +1,12 @@
 import { NativeRouter, Route, Routes } from 'react-router-native';
-import { LandingPage } from './src/views/LandingPage/LandingPage';
-
 import { useLayoutEffect, useState } from 'react';
-import { Login } from './src/views/Login/Login';
+
 import { getFonts } from './src/utils/globalStyles';
 import { PublicLayout1 } from './src/assets/components/PublicLayout1/PublicLayout1';
+import { LandingPage } from './src/views/LandingPage/LandingPage';
+import { Login } from './src/views/Login/Login';
+import { AboutUs } from './src/views/AboutUs/AboutUs';
+import { Faq } from './src/views/FAQ/Faq';
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false)
@@ -25,10 +27,10 @@ export default function App() {
             <LandingPage />
           } />
           <Route path='/Nosotros' element={
-            <Login />
+            <AboutUs />
           } />
           <Route path='/FAQ' element={
-            <Login />
+            <Faq />
           } />
           <Route path='/Inicio' element={
             <Login />

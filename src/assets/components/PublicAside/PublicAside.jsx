@@ -6,7 +6,7 @@ import HamburguerIcon from '../../icons/hamburguerIcon.svg'
 import whiteBackArrow from '../../icons/whiteBackArrow.png'
 import { styles } from './PublicAsideStyles'
 import { vw } from '../../../utils/globalStyles'
-import { onContactPress, onDataTreatmentCheckboxPress, onFaqPress, onUsPress } from './PublicAsideFunctions'
+import { onContactPress, onDataTreatmentCheckboxPress, onFaqPress, onTudataIconPress, onUsPress } from './PublicAsideFunctions'
 import { publicAsideStrings } from '../../../utils/strings'
 import { Checkbox } from '../Checkbox/Checkbox'
 import { useNavigate } from 'react-router-native'
@@ -26,9 +26,12 @@ export const PublicAside = () => {
       >
         <View style={styles.publicAsideModal}>
           <ScrollView contentContainerStyle={styles.publicAsideModalContent}>
-            <View style={[styles.publicAsideLogoContainer, styles.publicAsideOptionsColor, styles.publicAsideOptionsPaddingMargin]}>
+            <TouchableOpacity
+              style={[styles.publicAsideLogoContainer, styles.publicAsideOptionsColor, styles.publicAsideOptionsPaddingMargin]}
+              onPress={() => onTudataIconPress(navigate, setModalVisible)}
+            >
               <TudataIcon width={vw(33)} height={vw(11)} />
-            </View>
+            </TouchableOpacity>
             <View style={styles.publicAsideOptionsContainer}>
               <View>
                 <TouchableOpacity

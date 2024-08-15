@@ -1,10 +1,6 @@
-export const onContactPress = (setExpanded, LayoutAnimation) => {
-  LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut)
-  setExpanded(expanded => !expanded)
-}
-
-export const onDataTreatmentCheckboxPress = (setIsDataTreatmentChecked) => {
-  setIsDataTreatmentChecked(prev => !prev)
+export const onTudataIconPress = (navigate, setModalVisible) => {
+  navigate('/')
+  setModalVisible(false)
 }
 
 export const onUsPress = (navigate, setModalVisible) => {
@@ -15,4 +11,13 @@ export const onUsPress = (navigate, setModalVisible) => {
 export const onFaqPress = (navigate, setModalVisible) => {
   navigate('FAQ')
   setModalVisible(false)
+}
+
+export const onContactPress = (setExpanded, LayoutAnimation) => {
+  LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut)
+  setExpanded(expanded => !expanded)
+}
+
+export const onDataTreatmentCheckboxPress = (setIsDataTreatmentChecked) => {
+  setIsDataTreatmentChecked(prev => !prev)
 }
