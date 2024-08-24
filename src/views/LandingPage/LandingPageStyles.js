@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
     color: colors.color2,
     textAlign: 'center',
     fontSize: textSizes._50pt,
-    fontFamily: 'Quicksand_Bold',
+    fontFamily: 'Quicksand-Bold',
     lineHeight: vw(15)
   },
   landingPageSubtitle: {
@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: vh(4),
     fontSize: textSizes._16pt,
-    fontFamily: 'Quicksand_Bold',
+    fontFamily: 'Quicksand-Bold',
     lineHeight: vw(5.5)
   },
   landingPageContainer1: {

@@ -30,6 +30,19 @@ export const publicAsideStrings = {
   contactBtn1Txt1: 'Enviar'
 }
 
+export const aboutUsStrings = {
+  title: 'Nosotros',
+  titleCard1: '¿Quiénes somos?',
+  txt1Card1: 'Más que una aplicación o un startup, ',
+  txt2Card1: 'tudata',
+  txt3Card1: ' es una solución legal al abuso de la posición dominante de empresas comerciales en el tratamiento y/o comercialización de datos personales de los usuarios, quienes, a través de la aplicación, podrán permitir o bloquear el uso de sus datos personales y recibir una retribución económica por esto. Por medio de solicitudes y derechos de petición, trabajaremos para brindarte la seguridad que tu información se merece.',
+  titleCard2: 'Misión',
+  txt1Card2: 'Bajo la estructura y organización de nuestra plataforma, pretendemos llegar a todas las personas de distintos estratos socioeconómicos, con la finalidad de incentivar y crear consciencia sobre la importancia del manejo y administración de sus datos personales. A través de TuData los usuarios podrán defender, proteger y gestionar el uso de sus datos personales, que se encuentran bajo la posición dominante de las empresas que comercializan sus datos sin que medie previa autorización. Es por esto que buscamos devolverle el poder de los datos personales a sus titulares, bajo mecanismos de protección legal que garanticen el libre desarrollo del derecho fundamental de Habeas data al tiempo que puedan obtener una retribución económica por su comercialización.',
+  titleCard3: 'Visión',
+  txt1Card3: 'Nuestra visión va encaminada en convertirnos en la empresa número uno en Colombia y Latinoamérica, con amplio reconocimiento a nivel internacional en la defensa del derecho fundamental de Habeas Data, pionera en la administración y comercialización de datos personales bajo el control total de su titular.',
+  titleCard4: 'Política de tratamiento de datos personales',
+}
+
 export const userQueriesString = {
   valueNull: 'Error: there are null values',
   notChainedValues: 'Error: there are values that are not a string',

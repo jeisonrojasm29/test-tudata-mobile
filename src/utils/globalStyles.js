@@ -21,13 +21,13 @@ export const getFonts = () => Font.loadAsync({
   'Poppins-Thin': require('../assets/fonts/poppins/Poppins-Thin.otf'),
   'Poppins-ThinItalic': require('../assets/fonts/poppins/Poppins-ThinItalic.otf'),
 
-  'Quicksand_Bold_Oblique': require('../assets/fonts/quicksand/Quicksand_Bold_Oblique.otf'),
-  'Quicksand_Bold': require('../assets/fonts/quicksand/Quicksand_Bold.otf'), // Sí
-  'Quicksand_Book_Oblique': require('../assets/fonts/quicksand/Quicksand_Book_Oblique.otf'),
-  'Quicksand_Book': require('../assets/fonts/quicksand/Quicksand_Book.otf'),
-  'Quicksand_Dash': require('../assets/fonts/quicksand/Quicksand_Dash.otf'),
-  'Quicksand_Light_Oblique': require('../assets/fonts/quicksand/Quicksand_Light_Oblique.otf'),
-  'Quicksand_Light': require('../assets/fonts/quicksand/Quicksand_Light.otf'),
+  'Quicksand-Bold-Oblique': require('../assets/fonts/quicksand/Quicksand_Bold_Oblique.otf'),
+  'Quicksand-Bold': require('../assets/fonts/quicksand/Quicksand_Bold.otf'), // Sí
+  'Quicksand-Book-Oblique': require('../assets/fonts/quicksand/Quicksand_Book_Oblique.otf'),
+  'Quicksand-Book': require('../assets/fonts/quicksand/Quicksand_Book.otf'),
+  'Quicksand-Dash': require('../assets/fonts/quicksand/Quicksand_Dash.otf'),
+  'Quicksand-Light-Oblique': require('../assets/fonts/quicksand/Quicksand_Light_Oblique.otf'),
+  'Quicksand-Light': require('../assets/fonts/quicksand/Quicksand_Light.otf'),
 })
 
 export const windowHeight = Dimensions.get('window').height;
