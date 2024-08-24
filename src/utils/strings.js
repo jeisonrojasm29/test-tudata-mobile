@@ -43,6 +43,169 @@ export const aboutUsStrings = {
   titleCard4: 'Política de tratamiento de datos personales',
 }
 
+export const faqStrings = {
+  title: 'Preguntas frecuentes'
+}
+
+export const faqAskAndAnswersStrings = [
+  {
+    titleCard1: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card1: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard2: '¿Cuántos tipos de usuario tiene TUDATA?',
+    txt1Card2: 'Tiene 3 tipos de usuario ideales para todas las necesidades.'
+  },
+  {
+    titleCard3: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card3: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard4: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card4: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard5: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card5: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard6: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card6: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard7: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card7: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard8: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card8: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard9: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card9: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard10: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card10: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard11: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card11: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard12: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card12: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard13: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card13: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard14: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card14: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard15: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card15: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard16: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card16: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard17: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card17: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard18: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card18: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard19: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card19: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard20: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card20: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard21: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card21: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard22: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card22: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard23: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card23: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard24: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card24: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard25: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card25: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard26: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card26: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard27: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card27: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard28: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card28: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard29: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card29: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard30: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card30: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard31: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card31: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard32: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card32: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard33: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card33: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard34: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card34: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard35: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card35: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard36: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card36: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard37: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card37: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard38: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card38: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  },
+  {
+    titleCard39: '¿Dónde puedo acceder a TUDATA?',
+    txt1Card39: 'Descargando la App en Google Play para Android o a través de la página web www.tudata.com.co.'
+  }
+]
+
 export const userQueriesString = {
   valueNull: 'Error: there are null values',
   notChainedValues: 'Error: there are values that are not a string',
