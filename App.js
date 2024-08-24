@@ -6,7 +6,7 @@ import { PublicLayout1 } from './src/assets/components/PublicLayout1/PublicLayou
 import { LandingPage } from './src/views/LandingPage/LandingPage';
 import { Login } from './src/views/Login/Login';
 import { AboutUs } from './src/views/AboutUs/AboutUs';
-import { Faq } from './src/views/FAQ/Faq';
+import { Faq } from './src/views/Faq/Faq';
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false)

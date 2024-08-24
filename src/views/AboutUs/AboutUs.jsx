@@ -1,7 +1,10 @@
-import { Text } from "react-native"
+import { Text, View } from "react-native"
+import { styles } from "./AboutUsStyles"
 
 export const AboutUs = () => {
   return (
-    <Text>Nosotros</Text>
+    <View style={styles.aboutUs}>
+      <Text style={styles.aboutUsTitle}>Nosotros</Text>
+    </View>
   )
 }
