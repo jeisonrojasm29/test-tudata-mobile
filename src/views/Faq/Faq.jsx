@@ -1,4 +1,4 @@
-import { LayoutAnimation, ScrollView, Text, TouchableOpacity, View } from "react-native"
+import { FlatList, LayoutAnimation, Text, TouchableOpacity, View } from "react-native"
 import { styles } from "./FaqStyles"
 import { onCardPress } from "./FaqFunctions"
 import { useState } from "react"
@@ -52,26 +52,27 @@ export const Faq = () => {
   return (
     <View style={styles.faq}>
       <Text style={styles.faqTitle}>{faqStrings.title}</Text>
-      <ScrollView style={styles.faqPrincipalContent}>
-        {
-          faqAskAndAnswersStrings.map((item, index) => {
-            cardExpandedKeys = Object.keys(cardExpanded)
-            askAndAnswersKeys = Object.keys(item)
-            return (
-              <TouchableOpacity
-                key={index}
-                style={styles.faqCard}
-                onPress={() => onCardPress(setCardExpanded, LayoutAnimation, cardExpandedKeys[index])}
-              >
-                <Text style={styles.faqCardTitle}>{item[askAndAnswersKeys[0]]}</Text>
-                {
-                  cardExpanded[cardExpandedKeys[index]] && (<Text style={styles.faqCardDescription}>{item[askAndAnswersKeys[1]]}</Text>)
-                }
-              </TouchableOpacity>
-            )
-          })
-        }
-      </ScrollView>
+      <FlatList
+        style={styles.faqPrincipalContent}
+        keyExtractor={item => item[Object.keys(item)[0]]}
+        data={faqAskAndAnswersStrings}
+        renderItem={({ item, index }) => {
+          cardExpandedKeys = Object.keys(cardExpanded)
+          askAndAnswersKeys = Object.keys(item)
+          return (
+            <TouchableOpacity
+              key={index}
+              style={styles.faqCard}
+              onPress={() => onCardPress(setCardExpanded, LayoutAnimation, cardExpandedKeys[index])}
+            >
+              <Text style={styles.faqCardTitle}>{item[askAndAnswersKeys[0]]}</Text>
+              {
+                cardExpanded[cardExpandedKeys[index]] && (<Text style={styles.faqCardDescription}>{item[askAndAnswersKeys[1]]}</Text>)
+              }
+            </TouchableOpacity>
+          )
+        }}
+      />
     </View>
   )
 }
