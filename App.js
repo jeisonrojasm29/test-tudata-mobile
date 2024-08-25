@@ -7,6 +7,7 @@ import { LandingPage } from './src/views/LandingPage/LandingPage';
 import { Login } from './src/views/Login/Login';
 import { AboutUs } from './src/views/AboutUs/AboutUs';
 import { Faq } from './src/views/Faq/Faq';
+import { SignupFirstStep } from './src/views/SignupFirstStep/SignupFirstStep';
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false)
@@ -34,6 +35,9 @@ export default function App() {
           } />
           <Route path='/Login' element={
             <Login />
+          } />
+          <Route path='/SignupFirstStep' element={
+            <SignupFirstStep />
           } />
         </Routes>
       </PublicLayout1>

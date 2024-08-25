@@ -63,7 +63,7 @@ export const Login = () => {
             style={styles.loginRememberMeCheckbox}
             onCheck={() => onRememberMeCheckboxPress(setRememberMeChecked)}
           />
-          <Text style={styles.loginRememberMeText} >Recordarme</Text>
+          <Text style={styles.loginRememberMeText} >{loginStrings.loginRemembermeTxt}</Text>
         </View>
 
         <Button1
@@ -84,7 +84,7 @@ export const Login = () => {
           <Link to='/' underlayColor={colors.colorOpacity1} style={styles.loginFooterLink1}>
             <Text style={styles.loginFooterTxt1}>{loginStrings.loginFooterTxt1}</Text>
           </Link>
-          <Link to='/' underlayColor={colors.colorOpacity1} style={styles.loginFooterLink2}>
+          <Link to='/SignupFirstStep' underlayColor={colors.colorOpacity1} style={styles.loginFooterLink2}>
             <Text style={styles.loginFooterTxt2}>{loginStrings.loginFooterTxt2}<Text style={styles.loginFooterTxt3}>{loginStrings.loginFooterTxt3}</Text></Text>
           </Link>
         </View>

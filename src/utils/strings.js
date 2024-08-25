@@ -15,6 +15,21 @@ export const loginStrings = {
   loginTextInput1ErrorMsg: 'Email con formato incorrecto',
   loginTextInput2: 'Contraseña',
   loginTextInput2ErrorMsg: 'La contraseña debe contener mínimo 8 caracteres, mayúsculas, minúsculas, números y símbolos (! # $ % & * , . : ? @ [ ] ^ _ { | } ~).',
+  loginRemembermeTxt: 'Recordarme'
+}
+
+export const signupFirstStepStrings = {
+  signupFirstStepTitle: '¡Comienza ahora!',
+  signupFirstStepSubtitle: 'Crea tu cuenta.',
+  signupFirstStepTextInput1ErrorMsg: 'Email con formato incorrecto',
+  signupFirstStepTextInput1: 'Correo electrónico',
+  signupFirstStepTextInput2ErrorMsg: 'La contraseña debe contener mínimo 8 caracteres, mayúsculas, minúsculas, números y símbolos (! # $ % & * , . : ? @ [ ] ^ _ { | } ~).',
+  signupFirstStepTextInput2: 'Contraseña',
+  signupFirstStepText1Input3ErrorMsg: 'La contraseña debe contener mínimo 8 caracteres, mayúsculas, minúsculas, números y símbolos (! # $ % & * , . : ? @ [ ] ^ _ { | } ~).',
+  signupFirstStepText2Input3ErrorMsg: 'Las contraseñas deben ser iguales.',
+  signupFirstStepTextInput3: 'Confirma contraseña',
+  signupFirstStepButton1Txt: 'Continuar',
+  signupFirstStepInfoTxt: 'Ingresa una combinación de al menos ocho números, letras y signos de puntuación.',
 }
 
 export const publicAsideStrings = {
