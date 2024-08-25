@@ -4,7 +4,7 @@ export const onTudataIconPress = (navigate, setModalVisible) => {
 }
 
 export const onUsPress = (navigate, setModalVisible) => {
-  navigate('Nosotros')
+  navigate('AboutUs')
   setModalVisible(false)
 }
 

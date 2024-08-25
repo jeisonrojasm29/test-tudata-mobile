@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
-import { Text, View } from 'react-native'
+import { ScrollView, Text, View } from 'react-native'
 import { Link } from 'react-router-native'
 
 import { styles } from './LoginStyles'
 import TudataIcon from '../../assets/images/logoAndTudata.svg'
 import { Button1 } from '../../assets/components/Button1/Button1'
 import { loginStrings } from '../../utils/strings'
-import { colors, vw } from '../../utils/globalStyles'
-import { onEmailBlur, onEmailChange, onPasswordBlur, onPasswordChange, onSubmitPress } from './LoginFunctions'
+import { colors, vh, vw } from '../../utils/globalStyles'
+import { onEmailBlur, onEmailChange, onPasswordBlur, onPasswordChange, onRememberMeCheckboxPress, onSubmitPress } from './LoginFunctions'
 import { TextInput1 } from '../../assets/components/TextInput1/TextInput1'
 import { validateEmailFormat, validatePassFormat } from '../../utils/validateFunctions'
+import { Checkbox } from '../../assets/components/Checkbox/Checkbox'
 
 export const Login = () => {
   const [formValues, setFormValues] = useState({
@@ -22,41 +23,51 @@ export const Login = () => {
     password: true,
   })
 
+  const [rememberMeChecked, setRememberMeChecked] = useState(false)
+
   const [isRequesting, setIsRequesting] = useState(false)
   return (
-    <View style={styles.login}>
+    <ScrollView style={styles.login} showsVerticalScrollIndicator={false} >
       <View style={styles.loginLogoContainer}>
-        <TudataIcon width={vw(60)} height={vw(60)} />
-        <View>
+        <TudataIcon width={vw(60)} height={vh(10)} />
+        <View style={styles.loginPrincipalTextsContainer} >
           <Text style={styles.loginTitle}>{loginStrings.loginTitle}</Text>
           <Text style={styles.loginSubtitle}>{loginStrings.loginSubtitle}</Text>
         </View>
       </View>
 
       <View style={styles.loginInputsContainer}>
-        <View style={styles.loginInputsContent}>
-          <TextInput1
-            placeholder={loginStrings.loginTextInput1}
-            value={formValues.email}
-            isValidValue={isValidFormat.email}
-            onChangeText={(text) => onEmailChange(text, formValues, setFormValues)}
-            onBlur={() => onEmailBlur(formValues.email, isValidFormat, setIsValidFormat)}
-            errorMsg={loginStrings.loginTextInput1ErrorMsg}
-            autoCapitalize='none'
+        <TextInput1
+          autoCapitalize='none'
+          errorMsg={loginStrings.loginTextInput1ErrorMsg}
+          isValidValue={isValidFormat.email}
+          onBlur={() => onEmailBlur(formValues.email, isValidFormat, setIsValidFormat)}
+          onChangeText={(text) => onEmailChange(text, formValues, setFormValues)}
+          placeholder={loginStrings.loginTextInput1}
+          style={styles.loginInput}
+          value={formValues.email}
+        />
+        <TextInput1
+          errorMsg={loginStrings.loginTextInput2ErrorMsg}
+          isValidValue={isValidFormat.password}
+          onBlur={() => onPasswordBlur(formValues.password, isValidFormat, setIsValidFormat)}
+          onChangeText={(text) => onPasswordChange(text, formValues, setFormValues)}
+          placeholder={loginStrings.loginTextInput2}
+          secureTextEntry={true}
+          style={styles.loginInput}
+          value={formValues.password}
+        />
+        <View style={styles.loginRememberMeContainer} >
+          <Checkbox
+            isChecked={rememberMeChecked}
+            style={styles.loginRememberMeCheckbox}
+            onCheck={() => onRememberMeCheckboxPress(setRememberMeChecked)}
           />
-          <TextInput1
-            placeholder={loginStrings.loginTextInput2}
-            value={formValues.password}
-            isValidValue={isValidFormat.password}
-            onChangeText={(text) => onPasswordChange(text, formValues, setFormValues)}
-            onBlur={() => onPasswordBlur(formValues.password, isValidFormat, setIsValidFormat)}
-            errorMsg={loginStrings.loginTextInput2ErrorMsg}
-            secureTextEntry={true}
-          />
-          <Text>Recordarme</Text>
+          <Text style={styles.loginRememberMeText} >Recordarme</Text>
         </View>
+
         <Button1
-          text={loginStrings.loginButton1Txt}
+          disabled={isRequesting || !validateEmailFormat(formValues.email) || !validatePassFormat(formValues.password)}
           onPress={() =>
             onSubmitPress({
               email: formValues.email,
@@ -65,18 +76,19 @@ export const Login = () => {
               setIsRequesting
             })
           }
-          disabled={isRequesting || !validateEmailFormat(formValues.email) || !validatePassFormat(formValues.password)}
+          style={styles.loginLoginBtn}
+          text={loginStrings.loginButton1Txt}
         />
-      </View>
 
-      <View style={styles.loginFooterContainer}>
-        <Link to='/' underlayColor={colors.colorOpacity1}>
-          <Text style={styles.loginFooterTxt1}>{loginStrings.loginFooterTxt1}</Text>
-        </Link>
-        <Link to='/' underlayColor={colors.colorOpacity1}>
-          <Text style={styles.loginFooterTxt2}>{loginStrings.loginFooterTxt2}<Text style={styles.loginFooterTxt3}>{loginStrings.loginFooterTxt3}</Text></Text>
-        </Link>
+        <View style={styles.loginFooter} >
+          <Link to='/' underlayColor={colors.colorOpacity1} style={styles.loginFooterLink1}>
+            <Text style={styles.loginFooterTxt1}>{loginStrings.loginFooterTxt1}</Text>
+          </Link>
+          <Link to='/' underlayColor={colors.colorOpacity1} style={styles.loginFooterLink2}>
+            <Text style={styles.loginFooterTxt2}>{loginStrings.loginFooterTxt2}<Text style={styles.loginFooterTxt3}>{loginStrings.loginFooterTxt3}</Text></Text>
+          </Link>
+        </View>
       </View>
-    </View >
+    </ScrollView>
   )
 }

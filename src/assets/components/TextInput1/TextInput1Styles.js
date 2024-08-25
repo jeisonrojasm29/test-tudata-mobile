@@ -28,6 +28,7 @@ export const styles = StyleSheet.create({
     fontFamily: 'Poppins-Light',
     fontSize: textSizes._14pt,
     color: colors.color2,
-    textAlign: 'left'
+    textAlign: 'left',
+    lineHeight: vh(2.5)
   }
 })

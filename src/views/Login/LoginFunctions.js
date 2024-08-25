@@ -53,3 +53,7 @@ export const onSubmitPress = async ({
     }
   }
 }
+
+export const onRememberMeCheckboxPress = (setRememberMeChecked) => {
+  setRememberMeChecked(prev => !prev)
+}

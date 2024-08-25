@@ -26,13 +26,13 @@ export default function App() {
           <Route path='/' element={
             <LandingPage />
           } />
-          <Route path='/Nosotros' element={
+          <Route path='/AboutUs' element={
             <AboutUs />
           } />
           <Route path='/FAQ' element={
             <Faq />
           } />
-          <Route path='/Inicio' element={
+          <Route path='/Login' element={
             <Login />
           } />
         </Routes>
