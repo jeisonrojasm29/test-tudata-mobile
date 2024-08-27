@@ -8,6 +8,7 @@ import { Login } from './src/views/Login/Login';
 import { AboutUs } from './src/views/AboutUs/AboutUs';
 import { Faq } from './src/views/Faq/Faq';
 import { SignupFirstStep } from './src/views/SignupFirstStep/SignupFirstStep';
+import { SignupSecondStep } from './src/views/SignupSecondStep/SignupSecondStep';
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false)
@@ -38,6 +39,9 @@ export default function App() {
           } />
           <Route path='/SignupFirstStep' element={
             <SignupFirstStep />
+          } />
+          <Route path='/SignupSecondStep' element={
+            <SignupSecondStep />
           } />
         </Routes>
       </PublicLayout1>

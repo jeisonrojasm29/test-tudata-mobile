@@ -46,7 +46,5 @@ export const onPasswordConfirmationChange = (text, formValues, setFormValues) =>
 }
 
 export const onContinuePress = (navigate) => {
-  console.log('Hola');
-  
-  navigate('../')
+  navigate('../SignupSecondStep')
 }

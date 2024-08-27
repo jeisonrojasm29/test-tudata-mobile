@@ -3,7 +3,7 @@ import { Text, TextInput } from 'react-native'
 import { styles } from './TextInput1Styles'
 
 export const TextInput1 = ({
-  autoCapitalize = 'characters',
+  autoCapitalize = 'none',
   errorMsg,
   isValidValue,
   onBlur,

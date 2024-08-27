@@ -10,7 +10,7 @@ export const Button1 = ({
   text
 }) => {
   return (
-    <TouchableOpacity onPress={!disabled ? onPress : null} style={[styles.button1, style]}>
+    <TouchableOpacity onPress={!disabled ? onPress : null} style={[disabled ? styles.button1Disabled : styles.button1, style]}>
       <Text style={styles.button1Text}>{text}</Text>
     </TouchableOpacity>
   )
